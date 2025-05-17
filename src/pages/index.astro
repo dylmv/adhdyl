@@ -7,368 +7,43 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADHDyl.com - ADHD Coaching for a Fulfilling Life</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-color: #F0F4F8; /* Light, calming blue-gray */
-        }
-        .cta-button {
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-        .section-title {
-            font-size: 2.25rem; /* Equivalent to text-4xl */
-            font-weight: 700; /* bold */
-            margin-bottom: 1.5rem; /* mb-6 */
-            text-align: center;
-        }
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        /* Custom gradient for hero */
-        .hero-gradient {
-            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); /* Purple-ish gradient */
-        }
-        .testimonial-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0; /* gray-200 */
-        }
-         /* Ensure proper sizing and display for icons */
-        .icon-placeholder {
-            width: 3rem; /* w-12 */
-            height: 3rem; /* h-12 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0.5rem; /* rounded-lg */
-            margin-bottom: 1rem; /* mb-4 */
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-purple-600">ADHDyl.com</a>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#home" class="text-gray-600 hover:text-purple-600 transition duration-300">Home</a>
-                <a href="#about-adhd" class="text-gray-600 hover:text-purple-600 transition duration-300">About ADHD</a>
-                <a href="#services" class="text-gray-600 hover:text-purple-600 transition duration-300">Services</a>
-                <a href="#about-me" class="text-gray-600 hover:text-purple-600 transition duration-300">About Me</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-purple-600 transition duration-300">Testimonials</a>
-                <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg cta-button">Book a Call</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-purple-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
-            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition duration-300">Home</a>
-            <a href="#about-adhd" class="block px-6 py-3 text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition duration-300">About ADHD</a>
-            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition duration-300">Services</a>
-            <a href="#about-me" class="block px-6 py-3 text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition duration-300">About Me</a>
-            <a href="#testimonials" class="block px-6 py-3 text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition duration-300">Testimonials</a>
-            <a href="#contact" class="block px-6 py-3 bg-purple-600 text-white text-center font-semibold rounded-b-lg hover:bg-purple-700 cta-button">Book a Call</a>
-        </div>
-    </nav>
-
-    <header id="home" class="hero-gradient text-white py-20 md:py-32">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Unlock Your Potential. Thrive with ADHD.</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">Personalized ADHD coaching to help you understand your unique brain, build strategies for success, and live a more focused, fulfilling life.</p>
-            <a href="#contact" class="bg-white text-purple-700 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-100 cta-button shadow-lg">Schedule Your Free Discovery Call</a>
-            <p class="mt-4 text-sm text-purple-200">Let's explore how we can work together!</p>
-        </div>
-    </header>
-
-    <section id="about-adhd" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-gray-800">Understanding ADHD: Beyond the Label</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="prose lg:prose-lg max-w-none text-gray-700">
-                    <p>Attention-Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental condition that affects how you pay attention, manage impulses, and regulate activity levels. It's not a lack of willpower or intelligence, but a difference in brain wiring.</p>
-                    <p>Living with ADHD can present unique challenges in areas like:</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Focus & Concentration:</strong> Difficulty sustaining attention, easily distracted.</li>
-                        <li><strong>Organization & Time Management:</strong> Struggling with planning, prioritizing, and meeting deadlines.</li>
-                        <li><strong>Impulsivity:</strong> Acting without thinking, difficulty with self-control.</li>
-                        <li><strong>Emotional Regulation:</strong> Experiencing intense emotions, mood swings.</li>
-                        <li><strong>Motivation:</strong> Challenges with starting or completing tasks, especially if they're not highly stimulating.</li>
-                    </ul>
-                    <p>But ADHD also comes with incredible strengths like creativity, hyperfocus on interests, high energy, and out-of-the-box thinking. Coaching helps you leverage these strengths while developing strategies for the challenges.</p>
-                </div>
-                <div>
-                    <img src="https://placehold.co/600x400/A9A9A9/FFFFFF?text=Understanding+ADHD" alt="Illustration about ADHD concepts like focus, organization, and creativity" class="rounded-lg shadow-xl mx-auto" onerror="this.src='https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found'">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="how-coaching-helps" class="py-16 md:py-24 bg-purple-50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-purple-700">How ADHD Coaching Empowers You</h2>
-            <p class="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">ADHD coaching is a collaborative partnership designed to help you achieve your personal and professional goals. It's not therapy; it's forward-focused and action-oriented.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
-                    <div class="icon-placeholder bg-purple-100 text-purple-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Personalized Strategies</h3>
-                    <p class="text-gray-600">Develop practical, tailored techniques for managing time, staying organized, and improving focus that work with your ADHD brain, not against it.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
-                    <div class="icon-placeholder bg-purple-100 text-purple-600">
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Unlock Strengths</h3>
-                    <p class="text-gray-600">Identify and leverage your unique ADHD-related strengths like creativity, resilience, and hyperfocus to achieve your goals.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
-                    <div class="icon-placeholder bg-purple-100 text-purple-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Build Confidence</h3>
-                    <p class="text-gray-600">Overcome self-doubt and build self-esteem by understanding your ADHD and celebrating your progress, big or small.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
-                     <div class="icon-placeholder bg-purple-100 text-purple-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Improve Productivity</h3>
-                    <p class="text-gray-600">Learn to initiate tasks, manage distractions, and maintain momentum to achieve more of what matters to you.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
-                     <div class="icon-placeholder bg-purple-100 text-purple-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Enhance Relationships</h3>
-                    <p class="text-gray-600">Improve communication, understanding, and emotional regulation to foster healthier connections with loved ones and colleagues.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
-                    <div class="icon-placeholder bg-purple-100 text-purple-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Achieve Goals</h3>
-                    <p class="text-gray-600">Set clear, attainable goals and develop actionable plans to reach them, creating lasting positive change in your life.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-gray-800">My Coaching Services</h2>
-            <p class="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">I offer a range of coaching options to suit your individual needs and preferences. Let's find the perfect fit for you.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 feature-card">
-                    <img src="https://placehold.co/100x100/9370DB/FFFFFF?text=1:1" alt="1-on-1 Coaching Icon" class="h-16 w-16 mb-6 mx-auto rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/333333?text=Icon+Missing'">
-                    <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">One-on-One Coaching</h3>
-                    <p class="text-gray-600 mb-4">Highly personalized sessions focused entirely on your unique challenges, goals, and aspirations. We'll work together to create a roadmap for your success.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
-                        <li>Weekly or bi-weekly sessions</li>
-                        <li>Customized action plans</li>
-                        <li>Ongoing support & accountability</li>
-                    </ul>
-                    <a href="#contact" class="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg cta-button">Learn More & Book</a>
-                </div>
-
-                <div class="border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 feature-card">
-                    <img src="https://placehold.co/100x100/8A2BE2/FFFFFF?text=Group" alt="Group Coaching Icon" class="h-16 w-16 mb-6 mx-auto rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/333333?text=Icon+Missing'">
-                    <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">Group Coaching Programs</h3>
-                    <p class="text-gray-600 mb-4">Connect with a supportive community of individuals also navigating ADHD. Learn from shared experiences and gain new perspectives in a structured group setting.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
-                        <li>Thematic programs (e.g., Productivity, Emotional Regulation)</li>
-                        <li>Peer support and motivation</li>
-                        <li>Cost-effective option</li>
-                    </ul>
-                    <a href="#contact" class="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg cta-button">Explore Groups</a>
-                </div>
-
-                <div class="border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 feature-card">
-                     <img src="https://placehold.co/100x100/BA55D3/FFFFFF?text=Workshop" alt="Workshops Icon" class="h-16 w-16 mb-6 mx-auto rounded-full" onerror="this.src='https://placehold.co/100x100/cccccc/333333?text=Icon+Missing'">
-                    <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">Workshops & Webinars</h3>
-                    <p class="text-gray-600 mb-4">Engaging and informative sessions on specific ADHD-related topics. Gain valuable insights and practical tools in a focused, shorter format.</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
-                        <li>Topics like "Taming Time Blindness" or "Mindful Focus"</li>
-                        <li>Interactive and practical</li>
-                        <li>Accessible learning</li>
-                    </ul>
-                    <a href="#contact" class="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg cta-button">Upcoming Events</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about-me" class="py-16 md:py-24 bg-purple-50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-purple-700">Meet Your Coach</h2>
-            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-                <div class="md:w-1/3 text-center">
-                    <img src="https://placehold.co/300x300/D8BFD8/333333?text=Your+Photo" alt="Your Name - ADHD Coach" class="rounded-full shadow-xl mx-auto mb-6 w-48 h-48 md:w-64 md:h-64 object-cover" onerror="this.src='https://placehold.co/300x300/cccccc/333333?text=Photo+Here'">
-                    <h3 class="text-2xl font-semibold text-gray-800">Your Name</h3>
-                    <p class="text-purple-600 font-medium">Certified ADHD Coach</p>
-                </div>
-                <div class="md:w-2/3 prose lg:prose-lg max-w-none text-gray-700">
-                    <p>Hello! I'm [Your Name], and I'm passionate about helping individuals with ADHD transform their challenges into strengths. As someone who [mention your connection to ADHD - e.g., "has ADHD myself," or "has worked extensively with ADHD clients"], I understand the unique hurdles and the incredible potential that comes with this neurotype.</p>
-                    <p>My coaching approach is [describe your approach - e.g., "empathetic, strengths-based, and action-oriented"]. I believe that with the right understanding, strategies, and support, you can achieve remarkable things. I'm here to be your guide, your accountability partner, and your biggest cheerleader.</p>
-                    <p>My qualifications include [mention relevant qualifications, certifications, e.g., "Certified ADHD Life Coach (CALC)", "Member of ACO/ICF", years of experience]. I'm committed to ongoing learning to bring you the most effective and up-to-date coaching practices.</p>
-                    <p>When I'm not coaching, I enjoy [mention a hobby or two to make it personal].</p>
-                    <a href="#contact" class="inline-block mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg cta-button no-underline">Let's Connect</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title text-gray-800">What My Clients Say</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card p-8 rounded-xl shadow-lg">
-                    <p class="text-gray-600 italic mb-6">"Working with [Your Name] has been life-changing. I finally understand my ADHD and have tools that actually work. My productivity has soared, and I feel so much more confident!"</p>
-                    <div class="flex items-center">
-                        <img src="https://placehold.co/50x50/C8A2C8/FFFFFF?text=CS" alt="Client 1" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://placehold.co/50x50/cccccc/333333?text=Initials'">
-                        <div>
-                            <p class="font-semibold text-gray-800">Client S.</p>
-                            <p class="text-sm text-gray-500">Small Business Owner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card p-8 rounded-xl shadow-lg">
-                    <p class="text-gray-600 italic mb-6">"I was struggling with procrastination and overwhelm. [Your Name]'s empathetic approach and practical strategies helped me break through my blocks. Highly recommend!"</p>
-                     <div class="flex items-center">
-                        <img src="https://placehold.co/50x50/AFEEEE/333333?text=JM" alt="Client 2" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://placehold.co/50x50/cccccc/333333?text=Initials'">
-                        <div>
-                            <p class="font-semibold text-gray-800">John M.</p>
-                            <p class="text-sm text-gray-500">University Student</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card p-8 rounded-xl shadow-lg">
-                    <p class="text-gray-600 italic mb-6">"The group coaching program was fantastic! It was so helpful to connect with others who 'get it.' I learned so much and felt incredibly supported."</p>
-                     <div class="flex items-center">
-                        <img src="https://placehold.co/50x50/DB7093/FFFFFF?text=AR" alt="Client 3" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://placehold.co/50x50/cccccc/333333?text=Initials'">
-                        <div>
-                            <p class="font-semibold text-gray-800">Alex R.</p>
-                            <p class="text-sm text-gray-500">Creative Professional</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 md:py-32 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Take Control and Thrive?</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">If you're ready to explore how ADHD coaching can make a real difference in your life, I invite you to schedule a free, no-obligation discovery call.</p>
-            <a href="mailto:your-email@example.com?subject=ADHD%20Coaching%20Discovery%20Call%20Inquiry" class="bg-white text-purple-700 font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 cta-button shadow-xl">Book Your Free Call Now</a>
-            <p class="mt-6 text-purple-200">Or, email me at: <a href="mailto:your-email@example.com" class="underline hover:text-white">your-email@adhdyl.com</a></p>
-        </div>
-    </section>
-
-    <footer class="bg-gray-800 text-gray-300 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h4 class="text-xl font-semibold text-white mb-4">ADHDyl.com</h4>
-                    <p class="text-sm">Empowering individuals with ADHD to live their best lives.</p>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Facebook">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"></path></svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Instagram">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.172.052 1.791.218 2.165.417.429.232.744.557 1.008.962.264.405.48.833.635 1.305.155.471.245.976.275 1.625.03.864.042 1.156.042 3.584s-.012 2.72-.042 3.584c-.03.649-.12 1.154-.275 1.625a3.097 3.097 0 01-.635 1.305c-.264.405-.579.73-.943.962-.374.199-.993.365-2.165.417-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.172-.052-1.791-.218-2.165-.417a2.89 2.89 0 01-1.008-.962 3.097 3.097 0 01-.635-1.305c-.155-.471-.245-.976-.275-1.625C2.175 14.72 2.163 14.428 2.163 12s.012-2.72.042-3.584c.03-.649.12-1.154.275-1.625.155-.471.371-.9.635-1.305.264-.405.579-.73.943-.962.374-.199.993.365 2.165.417 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.84 0 8.42.012 7.137.067c-1.23.055-2.07.227-2.798.518A5.069 5.069 0 00.96 3.052a5.069 5.069 0 00-.518 2.798C.388 7.074.376 7.494.376 12s.012 4.926.067 6.15c.055 1.23.227 2.07.518 2.798a5.069 5.069 0 002.573 2.573c.729.291 1.568.463 2.798.518 1.273.055 1.694.067 4.863.067s3.59-.012 4.863-.067c1.23-.055 2.07-.227 2.798-.518a5.069 5.069 0 002.573-2.573c.291-.729.463-1.568.518-2.798.055-1.224.067-1.644.067-4.85s-.012-3.626-.067-4.85c-.055-1.23-.227-2.07-.518-2.798A5.069 5.069 0 0019.038.96a5.069 5.069 0 00-2.798-.518C14.926.388 14.506.376 12 .376zm0 4.865A4.735 4.735 0 1012 16.735a4.735 4.735 0 000-9.47zm0 7.372A2.638 2.638 0 1112 9.362a2.638 2.638 0 010 5.275zm4.905-7.813a1.162 1.162 0 100-2.324 1.162 1.162 0 000 2.324z"></path></svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#about-adhd" class="hover:text-purple-300 transition duration-300">About ADHD</a></li>
-                        <li><a href="#services" class="hover:text-purple-300 transition duration-300">Our Services</a></li>
-                        <li><a href="#about-me" class="hover:text-purple-300 transition duration-300">About Your Coach</a></li>
-                        <li><a href="#testimonials" class="hover:text-purple-300 transition duration-300">Testimonials</a></li>
-                        <li><a href="#contact" class="hover:text-purple-300 transition duration-300">Book a Free Call</a></li>
-                        <li><a href="#" class="hover:text-purple-300 transition duration-300">Blog (Coming Soon)</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-semibold text-white mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-purple-300 transition duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-purple-300 transition duration-300">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-purple-300 transition duration-300">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center border-t border-gray-700 pt-8">
-                <p class="text-sm">&copy; <span id="currentYear"></span> ADHDyl.com. All rights reserved. Designed with care.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                // Prevent default only if it's a valid scroll target, not just "#"
-                if (targetId && targetId.length > 1 && targetId.startsWith('#')) {
-                    e.preventDefault();
-                    try {
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                            // Close mobile menu after clicking a link
-                            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                                mobileMenu.classList.add('hidden');
-                            }
-                        }
-                    } catch (error) {
-                        console.error("Error scrolling to element:", targetId, error);
-                        // Optionally, allow default behavior if querySelector fails for some other reason
-                        // by not calling e.preventDefault() earlier or by re-triggering default.
-                        // For now, we'll just log the error.
-                    }
-                } else if (targetId === "#") {
-                    e.preventDefault(); // Prevent jumping to top for href="#"
-                    console.warn("Empty fragment identifier ('#') link clicked. No scroll action taken.");
-                }
-                // If it's not a hash link, or an invalid one we didn't catch, allow default behavior.
-            });
-        });
-
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-
-</body>
-</html>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<p>
+				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+				template serves as a lightweight, minimally-styled starting point for anyone looking to build
+				a personal website, blog, or portfolio with Astro.
+			</p>
+			<p>
+				This template comes with a few integrations already configured in your
+				<code>astro.config.mjs</code> file. You can customize your setup with
+				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
+				React, or Vue to your project.
+			</p>
+			<p>Here are a few ideas on how to get started with the template:</p>
+			<ul>
+				<li>Edit this page in <code>src/pages/index.astro</code></li>
+				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
+				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
+				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
+				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+			</ul>
+			<p>
+				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
+					>read the docs
+				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+			</p>
+			<p>
+				Looking for a blog template with a bit more personality? Check out <a
+					href="https://github.com/Charca/astro-blog-template"
+					>astro-blog-template
+				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
